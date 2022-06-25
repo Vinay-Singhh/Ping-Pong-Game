@@ -26,7 +26,7 @@ let windowWidth = window.innerWidth,
     rod = localStorage.getItem(storeName);
     maxScore = localStorage.getItem(storeScore);
     
-    if (rod === 'null' || maxScore === 'null') {
+    if(!rod || !maxScore) {
         alert("This is the first time you are playing this game. LET'S START");
         maxScore = 0;
         rod = "Rod1"
